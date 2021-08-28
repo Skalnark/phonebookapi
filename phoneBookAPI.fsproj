@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="Model/PhoneNumber.fs" />
+    <Compile Include="Model/Contact.fs" />
+    <Compile Include="Data/DatabaseContext.fs" />
+    <Compile Include="WeatherForecast.fs" />
+    <Compile Include="Controllers/ContactController.fs" />
+    <Compile Include="Controllers/WeatherForecastController.fs" />
+    <Compile Include="Migrations/*.fs" />
+    <Compile Include="Startup.fs" />
+    <Compile Include="Program.fs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0" />
+    <!--<PackageReference Include="EntityFrameworkCore.FSharp" Version="5.0.3-beta006" />-->
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="5.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="5.0" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,20 @@
+version: '3.4'
+
+services:
+  api:
+    image: mcr.microsoft.com/dotnet/sdk:5.0
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+  database:
+    image: postgres:12
+    ports:
+      - "5434:5432"
+    environment:
+      - POSTGRES_DB=postgres
+      - POSTGRES_PASSWORD=password
+    volumes:
+      - database:/var/lib/postgresql/data
+
+volumes:
+  database:
