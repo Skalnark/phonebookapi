@@ -1,23 +1,27 @@
-namespace PhoneBook
+namespace phoneBookAPI.Controllers
 
+open System
 open System.Collections.Generic
 open System.Linq
+open System.Threading.Tasks
 open Microsoft.AspNetCore.Mvc
+open Microsoft.Extensions.Logging
+open phoneBookAPI
 open Microsoft.EntityFrameworkCore
 open PhoneBook.Model
 open PhoneBook.Data.Context
 
-[<Route("api/[Controller]")>]
 [<ApiController>]
-type ContactController private () =
+[<Route("[controller]")>]
+type ContactController (logger : ILogger<ContactController>) =
     inherit ControllerBase()
-    new (context: DatabaseContext) as this =
-        ContactController () then
-        this._Context <- context
+    //new (context: DatabaseContext) as this =
+    //    ContactController () then
+    //    this._Context <- context
 
-    [<DefaultValue>]
-    val mutable _Context : DatabaseContext 
+    //[<DefaultValue>]
+    //val mutable _Context : DatabaseContext 
 
     [<HttpGet>]
-    member this.Get() =
-        Ok(this._Context.Contacts.ToList())
+    member _.Get() =
+        Ok("Hello, world")

@@ -2,6 +2,9 @@
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
+    <OutputType>exe</OutputType>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <GenerateRuntimeConfigurationFiles>true</GenerateRuntimeConfigurationFiles> 
   </PropertyGroup>
 
   <ItemGroup>
@@ -9,8 +12,7 @@
     <Compile Include="Model/Contact.fs" />
     <Compile Include="Data/DatabaseContext.fs" />
     <Compile Include="WeatherForecast.fs" />
-    <Compile Include="Controllers/ContactController.fs" />
-    <Compile Include="Controllers/WeatherForecastController.fs" />
+    <Compile Include="Controllers/*.fs" />
     <Compile Include="Migrations/*.fs" />
     <Compile Include="Startup.fs" />
     <Compile Include="Program.fs" />

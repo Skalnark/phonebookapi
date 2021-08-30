@@ -6,10 +6,11 @@
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "build",
-            "program": "${workspaceFolder}/obj/Debug/net5.0/phoneBookAPI.dll",
+            "program": "${workspaceFolder}/bin/Debug/net5.0/phoneBookAPI.dll",
             "args": [],
             "cwd": "${workspaceFolder}",
             "stopAtEntry": false,
+            "requireExactSource": false,
             // Enable launching a web browser when ASP.NET Core starts. For more information: https://aka.ms/VSCode-CS-LaunchJson-WebBrowser
             "serverReadyAction": {
                 "action": "openExternally",
@@ -19,7 +20,7 @@
                 "ASPNETCORE_ENVIRONMENT": "Development",
                 "DefaultConnection": "Server=localhost;Port=5433;Database=postgres;User Id=postgres;Password=password;",
             },
-            "applicationUrl": "http://0.0.0.0:5002",
+            "applicationUrl": "https://0.0.0.0:5000/contact",
         },
         {
             "name": ".NET Core Attach",
